@@ -1,0 +1,26 @@
+{
+  "name": "kfg",
+  "version": "1.0.0",
+  "description": "kfg markup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:invoice": "gulp build:invoice"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korobenko/kfg.git"
+  },
+  "author": "alexkor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/korobenko/kfg/issues"
+  },
+  "homepage": "https://github.com/korobenko/kfg#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
