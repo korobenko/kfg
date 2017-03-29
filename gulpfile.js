@@ -3,59 +3,66 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
-    notify = require('gulp-notify');
+    notify = require('gulp-notify'),
+    argv = require('yargs').argv;
 
-var rootDirInvoice = './invoice/';
+var rootDir = './';
 
-var cssInvoice = [
-    rootDirInvoice + 'css/normalize.css',
-    rootDirInvoice + 'css/style.css'
+if ( argv.invoice ) {
+    rootDir = './invoice/';
+}
+
+if ( argv.proposal ) {
+    rootDir = './proposal/';
+}
+
+var css = [
+    rootDir + 'css/partials/normalize.css',
+    rootDir + 'css/partials/style.css'
 ];
 
 var path = {
-    invoice: {
-        build: {
-            sass: rootDirInvoice + 'css/',
-            css: rootDirInvoice + 'build/css/'
-        },
-        src: {
-            sass: rootDirInvoice + 'sass/*.scss',
-            css: cssInvoice,
-        },
-        watch: {
-            sass: rootDirInvoice + 'sass/*.scss',
-            css: cssInvoice
-        }
+    build: {
+        sass: rootDir + 'css/partials/',
+        css: rootDir + 'build/css/'
+    },
+    src: {
+        sass: rootDir + 'sass/partials/*.scss',
+        css: css,
+    },
+    watch: {
+        sass: rootDir + 'sass/partials/*.scss',
+        css: css
     }
 };
 
-gulp.task('sass:build:invoice', function () {
-    return gulp.src(path.invoice.src.sass)
+gulp.task('sass:build', function () {
+    return gulp.src(path.src.sass)
         .pipe(sass( { errLogToConsole: false } ))
         .on('error', notify.onError({
             message: 'Error: <%= error.message %>',
             title: 'Error running something'
         }))
-        .pipe(gulp.dest(path.invoice.build.sass));
+        .pipe(gulp.dest(path.build.sass));
 });
 
-gulp.task('css:build:invoice', function () {
-    return gulp.src(path.invoice.src.css)
+gulp.task('css:build', function () {
+    return gulp.src(path.src.css)
         .pipe(concat('bundle.css'))
         .on('error', notify.onError({
             message: 'Error: <%= error.message %>',
             title: 'Error running something'
         }))
-        .pipe(gulp.dest(path.invoice.build.css));
+        .pipe(gulp.dest(path.build.css));
 });
 
-gulp.task('watch:invoice', function () {
-    gulp.watch(path.invoice.watch.sass, ['sass:build:invoice']);
-    gulp.watch(path.invoice.watch.css, ['css:build:invoice']);
+gulp.task('watch', function () {
+    gulp.watch(path.watch.sass, ['sass:build']);
+    gulp.watch(path.watch.css, ['css:build']);
 });
 
-gulp.task('build:invoice', [
-    'sass:build:invoice',
-    'css:build:invoice',
-    'watch:invoice'
+gulp.task('build', [
+    'sass:build',
+    'css:build',
+    'watch'
 ]);

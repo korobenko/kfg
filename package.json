@@ -1,11 +1,11 @@
 {
   "name": "kfg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "kfg markup",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:invoice": "gulp build:invoice"
+    "build:invoice": "gulp build --invoice",
+    "build:proposal": "gulp build --proposal"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-notify": "^3.0.0",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "yargs": "^7.0.2"
   }
 }

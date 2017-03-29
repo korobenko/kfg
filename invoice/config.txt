@@ -1,0 +1,1 @@
+wkhtmltopdf --margin-left '0mm' --margin-right '0mm' --image-quality '100' --footer-html '/Users/roniedio/Documents/work/kfg/invoice/footer.html' '/Users/roniedio/Documents/work/kfg/invoice/index.html' '/Users/roniedio/Documents/work/kfg/invoice/index.pdf'

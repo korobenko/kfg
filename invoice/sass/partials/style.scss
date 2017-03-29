@@ -1,4 +1,5 @@
 $font-src: '../../fonts';
+$image-src: '../../images';
 
 @font-face {
     font-family: 'Poppins';
@@ -53,6 +54,7 @@ body {
     position: relative;
     display: table;
     table-layout: fixed;
+    border-collapse: collapse;
     width: 100%;
     height: 100%;
     color: #000000;
@@ -75,16 +77,6 @@ figure {
 img {
     height: auto;
     max-width: 100%;
-}
-.header,
-.footer {
-    display: table-row;
-    width: 100%;
-}
-main {
-    display: table-row;
-    width: 100%;
-    height: 100%;
 }
 .text-left {
     text-align: left;
@@ -110,20 +102,53 @@ h2, h3, h4, h5, h6, b, strong {
     padding: 0px;
 }
 h1 {
-    @include font-size(24,26);
+    @include font-size(20,24);
     @include font-normal;
     margin: 0px;
     padding: 0px;
 }
 h2 {
     padding: 0px 0px 20px;
-    @include font-size(18,20);
+    @include font-size(16,20);
 }
 /*base*/
 
+.header {
+    display: table-row;
+    width: 100%;
+
+}
+.main {
+    display: table-row;
+    width: 100%;
+    height: 100%;
+}
+
 /*header*/
+.header {
+    figure {
+        max-width: 160px;
+    }
+}
+.header-wrapper {
+    position: relative;
+    padding: 0px 80px;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100px;
+        height: 150px;
+        background: url('#{$image-src}/corner-top.jpg');
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+}
 .header-row {
-    padding: 25px 0px;
+    padding: 20px 0px 0px;
     table {
         width: 100%;
         td {
@@ -131,17 +156,32 @@ h2 {
         }
     }
 }
+.main-top-row {
+    padding: 30px 0px;
+    table {
+        width: 100%;
+        td {
+            width: 50%;
+        }
+    }
+}
+.header-company-address {
+    @include font-size(12,16);
+}
 /*header*/
 
 /*main*/
 .main-wrapper {
-    padding: 30px 0px 0px;
+    padding: 0px 80px;
+}
+.invoice-data {
+    @include font-size(12,16);
 }
 .invoice-products-table {
     width: 100%;
     border-top: 5px solid #488bfd;
     border-bottom: 5px solid #488bfd;
-    @include font-size(14,20);
+    @include font-size(12,16);
     thead, th, tr.last {
         @include font-bold;
     }
@@ -151,6 +191,7 @@ h2 {
         vertical-align: middle;
     }
     tr {
+        page-break-inside: avoid;
         border-top: 1px solid #6fb6fd;
         &.last {
             td {
@@ -161,13 +202,13 @@ h2 {
         }
     }
     .number-column {
-        width: 10%;
+        width: 12%;
     }
     .services-column {
         width: 40%;
     }
     .price-column {
-        width: 18%;
+        width: 16%;
     }
     .count-column {
         width: 14%;
@@ -175,6 +216,9 @@ h2 {
     .total-column {
         width: 18%;
     }
+}
+.invoice-products-section {
+    padding: 30px 0px 0px;
 }
 .invoice-products-section + .payment-data-section {
     padding: 60px 0px 0px;
@@ -189,7 +233,7 @@ h2 {
         width: 100%;
         margin: 15px 0px 0px;
         padding: 0px;
-        @include font-size(14,20);
+        @include font-size(12,16);
         @include font-medium;
         &:first-child {
             margin-top: 0px;
@@ -208,15 +252,36 @@ h2 {
 /*main*/
 
 /*footer*/
+.footer {
+    display: none;
+    width: 100%;
+    &.visible {
+        display: block;
+    }
+}
 .footer-wrapper {
-    padding: 60px 0px 20px;
+    position: relative;
+    padding: 0px 80px;
     @include font-medium;
-    @include font-size(14,18);
+    @include font-size(12,16);
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 180px;
+        height: 100%;
+        background: url('#{$image-src}/corner-bottom.jpg');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        z-index: 1;
+    }
 }
 .footer-description {
     max-width: 70%;
     color: #545454;
-    @include font-size(12,16);
+    @include font-size(10,14);
     & + .footer-contact {
         padding-top: 30px;
     }
