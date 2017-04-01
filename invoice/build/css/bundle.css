@@ -448,8 +448,8 @@ th {
 
 @font-face {
   font-family: 'Poppins';
-  src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url("../../fonts/poppins/Poppinssemibold.woff2") format("woff2"), url("../../fonts/poppins/Poppinssemibold.woff") format("woff"), url("../../fonts/poppins/Poppinssemibold.ttf") format("truetype");
-  font-weight: 600;
+  src: local("Poppins Bold"), local("Poppins-Bold"), url("../../fonts/poppins/Poppinsbold.woff2") format("woff2"), url("../../fonts/poppins/Poppinsbold.woff") format("woff"), url("../../fonts/poppins/Poppinsbold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal; }
 
 /*base*/
@@ -513,7 +513,7 @@ img {
 
 h2, h3, h4, h5, h6, b, strong {
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
   margin: 0px;
   padding: 0px; }
@@ -597,7 +597,7 @@ h2 {
   line-height: 1.33333; }
   .invoice-products-table thead, .invoice-products-table th, .invoice-products-table tr.last {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal; }
   .invoice-products-table th, .invoice-products-table td {
     padding: 15px 10px;
