@@ -1,0 +1,1 @@
+wkhtmltopdf -T 0 -R 0 -B 0 -L 0 --image-quality 100 index.html index-1.html  index-2.html index-3.html index-4.html index-5.html index-6.html index.pdf
