@@ -33,7 +33,6 @@ body {
   position: relative;
   display: table;
   table-layout: fixed;
-  border-collapse: collapse;
   width: 100%;
   height: 100%;
   color: #000000;
@@ -46,7 +45,8 @@ body {
   width: 100%;
   max-width: 1040px;
   margin: 0px auto;
-  padding: 0px 20px; }
+  padding: 0px 60px;
+  z-index: 9; }
 
 figure {
   display: block;
@@ -83,8 +83,8 @@ h2, h3, h4, h5, h6, b, strong {
   padding: 0px; }
 
 h1 {
-  font-size: 1.25rem;
-  line-height: 1.2;
+  font-size: 1.375rem;
+  line-height: 1.09091;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -93,11 +93,11 @@ h1 {
 
 h2 {
   padding: 0px 0px 20px;
-  font-size: 1rem;
-  line-height: 1.25; }
+  font-size: 1.125rem;
+  line-height: 1.11111; }
 
 /*base*/
-.header {
+.header, .footer {
   display: table-row;
   width: 100%; }
 
@@ -112,57 +112,62 @@ h2 {
 
 .header-wrapper {
   position: relative;
-  padding: 0px 80px; }
+  padding: 0px 0px; }
   .header-wrapper:before {
     content: '';
     position: absolute;
-    top: 0px;
+    top: 35px;
     left: 0px;
     width: 100px;
-    height: 150px;
-    background: url("../../images/corner-top.jpg");
+    height: 320px;
+    background: url("../../images/tex-01.jpg");
     background-position: left top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
     z-index: 1; }
 
 .header-row {
   padding: 20px 0px 0px; }
   .header-row table {
-    width: 100%; }
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal; }
     .header-row table td {
       width: 50%; }
 
 .main-top-row {
   padding: 30px 0px; }
   .main-top-row table {
-    width: 100%; }
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal; }
     .main-top-row table td {
       width: 50%; }
 
 .header-company-address {
-  font-size: 0.75rem;
-  line-height: 1.33333; }
+  font-size: 0.875rem;
+  line-height: 1.28571; }
 
 /*header*/
 /*main*/
 .main-wrapper {
-  padding: 0px 80px; }
+  padding: 0px 0px; }
 
 .invoice-data {
-  font-size: 0.75rem;
-  line-height: 1.33333; }
+  font-size: 0.875rem;
+  line-height: 1.28571; }
 
 .invoice-products-table {
   width: 100%;
   border-top: 5px solid #488bfd;
   border-bottom: 5px solid #488bfd;
-  font-size: 0.75rem;
-  line-height: 1.33333; }
-  .invoice-products-table thead, .invoice-products-table th, .invoice-products-table tr.last {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-style: normal; }
+  font-size: 0.875rem;
+  line-height: 1.28571;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal; }
   .invoice-products-table th, .invoice-products-table td {
     padding: 15px 10px;
     text-align: center;
@@ -198,8 +203,8 @@ h2 {
     width: 100%;
     margin: 15px 0px 0px;
     padding: 0px;
-    font-size: 0.75rem;
-    line-height: 1.33333;
+    font-size: 0.875rem;
+    line-height: 1.28571;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-style: normal; }
@@ -214,39 +219,33 @@ h2 {
 
 /*main*/
 /*footer*/
-.footer {
-  display: none;
-  width: 100%; }
-  .footer.visible {
-    display: block; }
-
 .footer-wrapper {
   position: relative;
-  padding: 0px 80px;
+  padding: 80px 0px 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1.33333; }
+  font-size: 0.875rem;
+  line-height: 1.28571; }
   .footer-wrapper:before {
     content: '';
     position: absolute;
     bottom: 0px;
     right: 0px;
     width: 180px;
-    height: 100%;
-    background: url("../../images/corner-bottom.jpg");
+    height: 580px;
+    background: url("../../images/tex-02.jpg");
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: auto 100%;
     z-index: 1; }
 
 .footer-description {
-  max-width: 70%;
+  max-width: 80%;
   color: #545454;
-  font-size: 0.625rem;
-  line-height: 1.4; }
+  font-size: 0.75rem;
+  line-height: 1.33333; }
   .footer-description + .footer-contact {
-    padding-top: 30px; }
+    padding-top: 20px; }
 
 /*footer*/

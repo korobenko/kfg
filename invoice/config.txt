@@ -1,1 +1,1 @@
-wkhtmltopdf -L 0 -R 0 --image-quality 100 --footer-html /Users/roniedio/Documents/work/kfg/invoice/footer.html /Users/roniedio/Documents/work/kfg/invoice/index.html /Users/roniedio/Documents/work/kfg/invoice/index.pdf
+wkhtmltopdf -L 0 -R 0 --image-quality 100 index.html index.pdf

@@ -54,7 +54,6 @@ body {
     position: relative;
     display: table;
     table-layout: fixed;
-    border-collapse: collapse;
     width: 100%;
     height: 100%;
     color: #000000;
@@ -67,7 +66,8 @@ body {
     width: 100%;
     max-width: 1040px;
     margin: 0px auto;
-    padding: 0px 20px;
+    padding: 0px 60px;
+    z-index: 9;
 }
 figure {
     display: block;
@@ -102,18 +102,18 @@ h2, h3, h4, h5, h6, b, strong {
     padding: 0px;
 }
 h1 {
-    @include font-size(20,24);
+    @include font-size(22,24);
     @include font-normal;
     margin: 0px;
     padding: 0px;
 }
 h2 {
     padding: 0px 0px 20px;
-    @include font-size(16,20);
+    @include font-size(18,20);
 }
 /*base*/
 
-.header {
+.header, .footer {
     display: table-row;
     width: 100%;
 
@@ -132,18 +132,31 @@ h2 {
 }
 .header-wrapper {
     position: relative;
-    padding: 0px 80px;
+    padding: 0px 0px;
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0px;
+    //     left: 0px;
+    //     width: 100px;
+    //     height: 150px;
+    //     background: url('#{$image-src}/corner-top.jpg');
+    //     background-position: left top;
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     z-index: 1;
+    // }
     &:before {
         content: '';
         position: absolute;
-        top: 0px;
+        top: 35px;
         left: 0px;
         width: 100px;
-        height: 150px;
-        background: url('#{$image-src}/corner-top.jpg');
+        height: 320px;
+        background: url('#{$image-src}/tex-01.jpg');
         background-position: left top;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: auto 100%;
         z-index: 1;
     }
 }
@@ -151,6 +164,7 @@ h2 {
     padding: 20px 0px 0px;
     table {
         width: 100%;
+        @include font-medium;
         td {
             width: 50%;
         }
@@ -160,31 +174,33 @@ h2 {
     padding: 30px 0px;
     table {
         width: 100%;
+        @include font-medium;
         td {
             width: 50%;
         }
     }
 }
 .header-company-address {
-    @include font-size(12,16);
+    @include font-size(14,18);
 }
 /*header*/
 
 /*main*/
 .main-wrapper {
-    padding: 0px 80px;
+    padding: 0px 0px;
 }
 .invoice-data {
-    @include font-size(12,16);
+    @include font-size(14,18);
 }
 .invoice-products-table {
     width: 100%;
     border-top: 5px solid #488bfd;
     border-bottom: 5px solid #488bfd;
-    @include font-size(12,16);
-    thead, th, tr.last {
-        @include font-bold;
-    }
+    @include font-size(14,18);
+    @include font-medium;
+    // thead, th, tr.last {
+    //     @include font-bold;
+    // }
     th, td {
         padding: 15px 10px;
         text-align: center;
@@ -233,7 +249,7 @@ h2 {
         width: 100%;
         margin: 15px 0px 0px;
         padding: 0px;
-        @include font-size(12,16);
+        @include font-size(14,18);
         @include font-medium;
         &:first-child {
             margin-top: 0px;
@@ -252,26 +268,39 @@ h2 {
 /*main*/
 
 /*footer*/
-.footer {
-    display: none;
-    width: 100%;
-    &.visible {
-        display: block;
-    }
-}
+// .footer {
+//     display: none;
+//     width: 100%;
+//     &.visible {
+//         display: block;
+//     }
+// }
 .footer-wrapper {
     position: relative;
-    padding: 0px 80px;
+    padding: 80px 0px 20px;
     @include font-medium;
-    @include font-size(12,16);
+    @include font-size(14,18);
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 0px;
+    //     right: 0px;
+    //     width: 180px;
+    //     height: 100%;
+    //     background: url('#{$image-src}/corner-bottom.jpg');
+    //     background-position: right bottom;
+    //     background-repeat: no-repeat;
+    //     background-size: auto 100%;
+    //     z-index: 1;
+    // }
     &:before {
         content: '';
         position: absolute;
         bottom: 0px;
         right: 0px;
         width: 180px;
-        height: 100%;
-        background: url('#{$image-src}/corner-bottom.jpg');
+        height: 580px;
+        background: url('#{$image-src}/tex-02.jpg');
         background-position: right bottom;
         background-repeat: no-repeat;
         background-size: auto 100%;
@@ -279,11 +308,11 @@ h2 {
     }
 }
 .footer-description {
-    max-width: 70%;
+    max-width: 80%;
     color: #545454;
-    @include font-size(10,14);
+    @include font-size(12,16);
     & + .footer-contact {
-        padding-top: 30px;
+        padding-top: 20px;
     }
 }
 /*footer*/
