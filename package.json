@@ -1,6 +1,6 @@
 {
   "name": "kfg",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "kfg markup",
   "main": "gulpfile.js",
   "scripts": {
