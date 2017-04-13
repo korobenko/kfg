@@ -1,38 +1,13 @@
-$font-src: '../../fonts';
 $image-src: '../../images';
 
-@font-face {
-    font-family: 'Poppins';
-    src: local('Poppins'), local('Poppins-Regular'), url('#{$font-src}/poppins/Poppins.woff2') format('woff2'), url('#{$font-src}/poppins/Poppins.woff') format('woff'), url('#{$font-src}/poppins/Poppins.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: local('Poppins Medium'), local('Poppins-Medium'), url('#{$font-src}/poppins/Poppinsmedium.woff2') format('woff2'), url('#{$font-src}/poppins/Poppinsmedium.woff') format('woff'), url('#{$font-src}/poppins/Poppinsmedium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: local('Poppins Bold'), local('Poppins-Bold'), url('#{$font-src}/poppins/Poppinsbold.woff2') format('woff2'), url('#{$font-src}/poppins/Poppinsbold.woff') format('woff'), url('#{$font-src}/poppins/Poppinsbold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
 @mixin font-normal {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Arial', sans-serif;
 }
 @mixin font-medium {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    font-family: 'Arial', sans-serif;
 }
 @mixin font-bold {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    font-family: 'Arial', sans-serif;
 }
 @mixin font-size($fontSize, $lineHeight) {
     font-size: #{$fontSize/16}rem;

@@ -1,21 +1,3 @@
-@font-face {
-  font-family: 'Poppins';
-  src: local("Poppins"), local("Poppins-Regular"), url("../../fonts/poppins/Poppins.woff2") format("woff2"), url("../../fonts/poppins/Poppins.woff") format("woff"), url("../../fonts/poppins/Poppins.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Poppins';
-  src: local("Poppins Medium"), local("Poppins-Medium"), url("../../fonts/poppins/Poppinsmedium.woff2") format("woff2"), url("../../fonts/poppins/Poppinsmedium.woff") format("woff"), url("../../fonts/poppins/Poppinsmedium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Poppins';
-  src: local("Poppins Bold"), local("Poppins-Bold"), url("../../fonts/poppins/Poppinsbold.woff2") format("woff2"), url("../../fonts/poppins/Poppinsbold.woff") format("woff"), url("../../fonts/poppins/Poppinsbold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal; }
-
 /*base*/
 html,
 body {
@@ -25,9 +7,7 @@ body {
   height: 100%;
   font-size: 14px;
   line-height: 20px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal; }
+  font-family: 'Arial', sans-serif; }
 
 body {
   position: relative;
@@ -76,18 +56,14 @@ img {
   vertical-align: bottom; }
 
 h2, h3, h4, h5, h6, b, strong {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-family: 'Arial', sans-serif;
   margin: 0px;
   padding: 0px; }
 
 h1 {
   font-size: 1.375rem;
   line-height: 1.09091;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Arial', sans-serif;
   margin: 0px;
   padding: 0px; }
 
@@ -130,9 +106,7 @@ h2 {
   padding: 20px 0px 0px; }
   .header-row table {
     width: 100%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-style: normal; }
+    font-family: 'Arial', sans-serif; }
     .header-row table td {
       width: 50%; }
 
@@ -140,9 +114,7 @@ h2 {
   padding: 30px 0px; }
   .main-top-row table {
     width: 100%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-style: normal; }
+    font-family: 'Arial', sans-serif; }
     .main-top-row table td {
       width: 50%; }
 
@@ -165,9 +137,7 @@ h2 {
   border-bottom: 5px solid #488bfd;
   font-size: 0.875rem;
   line-height: 1.28571;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-style: normal; }
+  font-family: 'Arial', sans-serif; }
   .invoice-products-table th, .invoice-products-table td {
     padding: 15px 10px;
     text-align: center;
@@ -205,9 +175,7 @@ h2 {
     padding: 0px;
     font-size: 0.875rem;
     line-height: 1.28571;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-style: normal; }
+    font-family: 'Arial', sans-serif; }
     .payment-data-group table:first-child {
       margin-top: 0px; }
   .payment-data-group td {
@@ -222,9 +190,7 @@ h2 {
 .footer-wrapper {
   position: relative;
   padding: 80px 0px 20px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-style: normal;
+  font-family: 'Arial', sans-serif;
   font-size: 0.875rem;
   line-height: 1.28571; }
   .footer-wrapper:before {
