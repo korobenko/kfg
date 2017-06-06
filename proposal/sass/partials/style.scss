@@ -307,16 +307,50 @@ h2 {
         li {
             position: relative;
             padding: 5px 0px 5px 40px;
+            // &:before {
+            //     content: '';
+            //     position: absolute;
+            //     top: 5px;
+            //     left: 0px;
+            //     width: 20px;
+            //     height: 20px;
+            //     border-radius: 50%;
+            //     background: $blue-color;
+            //     z-index: 1;
+            // }
             &:before {
                 content: '';
+                pointer-events: none;
+                width: 10px;
+                height: 3px;
                 position: absolute;
-                top: 5px;
-                left: 0px;
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                background: $blue-color;
-                z-index: 1;
+                top: 16px;
+                margin: auto 0px;
+                left: 3px;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                box-shadow: inset 0px 0px 0px 26px $blue-color;
+                -webkit-transform-origin: right;
+                -ms-transform-origin: right;
+                transform-origin: right;
+            }
+            &:after {
+                content: '';
+                pointer-events: none;
+                width: 10px;
+                height: 3px;
+                position: absolute;
+                top: 15px;
+                margin: auto 0px;
+                left: 3px;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                box-shadow: inset 0px 0px 0px 26px $blue-color;
+                -webkit-transform-origin: right;
+                -ms-transform-origin: right;
+                transform-origin: right;
             }
         }
         p {
@@ -328,7 +362,7 @@ h2 {
             padding: 15px 0px 15px 0px;
             li {
                 padding: 0px;
-                &:before {
+                &:before, &:after {
                     display: none;
                 }
             }
