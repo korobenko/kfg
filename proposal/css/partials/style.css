@@ -90,6 +90,16 @@ h2 {
   font-size: 1rem;
   line-height: 1.25; }
 
+.page-hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #80c6ff; }
+  .page-hr.medium {
+    height: 3px; }
+  .page-hr.large {
+    height: 5px; }
+
 /*base*/
 /*header*/
 .main-header {
@@ -147,6 +157,8 @@ h2 {
 .page-header-table {
   width: 100%;
   border-bottom: 5px solid #80c6ff; }
+  .page-header-table.no-border {
+    border-color: transparent; }
   .page-header-table td {
     padding: 20px 0px 15px; }
 
